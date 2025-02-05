@@ -12,12 +12,12 @@ const irish = Irish_Grover({
 
 const Showcase = () => {
 	return (
-		<div className="bg-gradient-to-r from-gray-900 to-black min-h-[90vh]">
+		<div className="bg-gradient-to-r from-black to-[#252222] min-h-[90vh]">
 			<Header />
 			<div className="container grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-				<div className="space-y-6">
+				<div className="space-y-6 flex flex-col items-start justify-center">
 					<h1
-						className={`text-4xl lg:text-5xl ${irish.className} leading-normal lg:leading-normal`}
+						className={`text-4xl lg:text-6xl ${irish.className} leading-normal lg:leading-normal`}
 					>
 						Elevate your style, <br />
 						Own your <ColourfulText text="Confidence" />
@@ -46,7 +46,7 @@ const Showcase = () => {
 						alt={"A picture of Rose Eyo wearing a black jacket"}
 						width={1000}
 						height={1000}
-						className="w-auto h-auto"
+						className="w-full h-full"
 					/>
 				</div>
 			</div>

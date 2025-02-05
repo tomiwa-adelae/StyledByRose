@@ -73,6 +73,9 @@ export function MobileNavbar() {
 							</SheetClose>
 						);
 					})}
+					<Button className="mt-8">
+						<a href="">Get 31-day-style guide</a>
+					</Button>
 				</nav>
 			</SheetContent>
 		</Sheet>
