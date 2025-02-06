@@ -15,7 +15,7 @@ const Showcase = () => {
 		<div className="bg-gradient-to-r from-black to-[#252222] min-h-[90vh]">
 			<Header />
 			<div className="container grid grid-cols-1 md:grid-cols-2 gap-8 text-white">
-				<div className="space-y-6 flex flex-col items-start justify-center">
+				<div className="space-y-6 flex flex-col items-start justify-center pt-20 md:pt-0">
 					<h1
 						className={`text-4xl lg:text-6xl ${irish.className} leading-normal lg:leading-normal`}
 					>
@@ -33,7 +33,7 @@ const Showcase = () => {
 							asChild
 							size={"lg"}
 						>
-							<Link href="/">Learn more</Link>
+							<Link href="/about">Learn more</Link>
 						</Button>
 						<Button className="w-full" asChild size={"lg"}>
 							<Link href="/">Get the 31-Day style guide</Link>

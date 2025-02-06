@@ -159,3 +159,16 @@ export const socialLinks = [
 		name: "Youtube",
 	},
 ];
+
+export const contactDetails = [
+	{
+		icon: "/assets/icons/phone.svg",
+		detail: "(+234) 812 3456 789",
+		title: "Phone number",
+	},
+	{
+		icon: "/assets/icons/email.svg",
+		detail: "styledbyrose@gmail.com",
+		title: "Email",
+	},
+];

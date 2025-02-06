@@ -12,7 +12,7 @@ const FAQs = () => {
 			<div className="container">
 				<div className="text-center space-y-4">
 					<h3 className="uppercase leading-relaxed font-semibold text-xl md:text-2xl">
-						Frequently Asked Questions
+						Got Questions? We’ve Got Answers
 					</h3>
 					<p className="text-sm leading-loose">
 						We know you might have some questions before starting

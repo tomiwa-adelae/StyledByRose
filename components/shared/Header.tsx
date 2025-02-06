@@ -11,10 +11,10 @@ const irish = Irish_Grover({
 	weight: ["400"],
 });
 
-const Header = () => {
+const Header = ({ border }: { border?: boolean }) => {
 	const pathname = usePathname();
 	return (
-		<header className={`py-8 z-50 `}>
+		<header className={`py-8 z-50 ${border && "border-primary border-b"}`}>
 			<div className="container flex items-center justify-between gap-2">
 				<h3
 					className={`uppercase text-primary text-2xl lg:text-2xl font-semibold ${
@@ -28,7 +28,7 @@ const Header = () => {
 						{navLinks.map(({ title, route }, index) => (
 							<Link
 								key={index}
-								className={`uppercase text-xs font-medium hover:text-primary transition ease-in-out ${
+								className={`uppercase text-xs font-semibold hover:text-primary transition ease-in-out ${
 									pathname === "/" &&
 									"text-white border-gray-200"
 								}`}
