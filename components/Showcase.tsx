@@ -26,7 +26,7 @@ const Showcase = () => {
 						Premium corporate styling for professionals who want to
 						stand out with confidence and elegance.
 					</p>
-					<div className="flex items-center justify-start gap-8">
+					<div className="flex flex-col sm:flex-row items-center justify-start gap-4">
 						<Button
 							variant={"secondary"}
 							className="w-full"
