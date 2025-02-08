@@ -1,8 +1,19 @@
+import ContactDetails from "@/components/ContactDetails";
 import { ContactForm } from "@/components/forms/ContactForm";
 import Header from "@/components/shared/Header";
-import { contactDetails, socialLinks } from "@/constants";
+import { socialLinks } from "@/constants";
 import { Irish_Grover } from "next/font/google";
 import Image from "next/image";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Contact StyledByRose | Get in Touch for Expert Corporate Styling",
+	description:
+		"Have questions or need expert fashion guidance? Contact StyledByRose for corporate styling services, wardrobe consultations, and personalized fashion advice. Let’s elevate your style today!",
+	keywords:
+		"contact StyledByRose, corporate styling consultation, fashion advice, professional styling, wardrobe consultation, personal stylist, business fashion expert, get in touch, tomiwa adelae, rose eyo",
+};
 
 const irish = Irish_Grover({
 	subsets: ["latin"],
@@ -31,30 +42,10 @@ const page = () => {
 								out. Our team is always ready to help.
 							</p>
 						</div>
-						<div className="grid gap-4 mt-8">
-							{contactDetails.map(
-								({ icon, title, detail }, index) => (
-									<div
-										key={index}
-										className="flex items-center justify-start gap-2"
-									>
-										<Image
-											src={icon}
-											alt={`The icon of a ${title}`}
-											width={1000}
-											height={1000}
-											className="w-[30px] h-[30px]"
-										/>
-										<p className="font-semibold text-sm">
-											{detail}
-										</p>
-									</div>
-								)
-							)}
-						</div>
+						<ContactDetails />
 						<div className="mt-4 flex items-center justify-start gap-4">
 							{socialLinks.map(({ url, icon, name }, index) => (
-								<a key={index} href={url}>
+								<a target="_blank" key={index} href={url}>
 									<div
 										className={`inline-block p-3 rounded-full`}
 									>

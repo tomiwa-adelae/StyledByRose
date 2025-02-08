@@ -81,7 +81,19 @@ export const testimonials = [
 
 export const images = [
 	{
-		src: "/assets/images/rose-2.jpeg",
+		src: "/assets/images/rose-4.jpeg",
+		alt: "A picture of Rose Eyo wearing a black jacket",
+	},
+	{
+		src: "/assets/images/rose-5.JPG",
+		alt: "A picture of Rose Eyo wearing a pink shirt and pink trousers without a shoe",
+	},
+	{
+		src: "/assets/images/rose-6.JPG",
+		alt: "A picture of Rose Eyo wearing a pink shirt and pink trousers without a shoe",
+	},
+	{
+		src: "/assets/images/rose-3.jpeg",
 		alt: "A picture of Rose Eyo wearing a black jacket",
 	},
 	{
@@ -89,27 +101,19 @@ export const images = [
 		alt: "A picture of Rose Eyo wearing a black jacket",
 	},
 	{
-		src: "/assets/images/rose-2.jpeg",
+		src: "/assets/images/rose-7.JPG",
+		alt: "A picture of Rose Eyo wearing a pink shirt and pink trousers without a shoe",
+	},
+	{
+		src: "/assets/images/rose-8.jpeg",
 		alt: "A picture of Rose Eyo wearing a black jacket",
 	},
 	{
-		src: "/assets/images/rose-2.jpeg",
+		src: "/assets/images/rose-9.jpeg",
 		alt: "A picture of Rose Eyo wearing a black jacket",
 	},
 	{
-		src: "/assets/images/rose-2.jpeg",
-		alt: "A picture of Rose Eyo wearing a black jacket",
-	},
-	{
-		src: "/assets/images/rose-2.jpeg",
-		alt: "A picture of Rose Eyo wearing a black jacket",
-	},
-	{
-		src: "/assets/images/rose-2.jpeg",
-		alt: "A picture of Rose Eyo wearing a black jacket",
-	},
-	{
-		src: "/assets/images/rose-2.jpeg",
+		src: "/assets/images/rose-10.jpeg",
 		alt: "A picture of Rose Eyo wearing a black jacket",
 	},
 ];
@@ -140,12 +144,12 @@ export const faqs = [
 export const socialLinks = [
 	{
 		icon: "/assets/icons/facebook.svg",
-		url: "facebook.com",
+		url: "https://web.facebook.com/profile.php?id=61572524822819",
 		name: "Facebook",
 	},
 	{
 		icon: "/assets/icons/tiktok.svg",
-		url: "tiktok.com",
+		url: "https://www.tiktok.com/@stylemanagementbyrose?_t=ZM-8tiQg1ZfyWD&_r=1",
 		name: "Tiktok",
 	},
 	{
@@ -158,17 +162,22 @@ export const socialLinks = [
 		url: "https://www.youtube.com/@SMbyRose",
 		name: "Youtube",
 	},
+	{
+		icon: "/assets/icons/whatsapp.svg",
+		url: "https://wa.me/message/42L2WCSTORYKK1",
+		name: "Whatsapp",
+	},
 ];
 
 export const contactDetails = [
 	{
 		icon: "/assets/icons/phone.svg",
-		detail: "(+234) 812 3456 789",
+		detail: "(+234) 815 914 2483",
 		title: "Phone number",
 	},
 	{
 		icon: "/assets/icons/email.svg",
-		detail: "styledbyrose@gmail.com",
+		detail: "stylemanagementbyrose@gmail.com",
 		title: "Email",
 	},
 ];

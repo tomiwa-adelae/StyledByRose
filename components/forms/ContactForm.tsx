@@ -16,23 +16,26 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/hooks/use-toast";
-import { MoveUpRight } from "lucide-react";
+import { LoaderCircle, MoveUpRight } from "lucide-react";
+import { preventWrongPhoneNumber } from "@/lib/utils";
+import emailjs from "@emailjs/browser";
 
 const FormSchema = z.object({
 	name: z.string().min(2, {
 		message: "Name must be at least 2 characters.",
 	}),
-	email: z.string().email().min(2, {
-		message: "Name must be at least 2 characters.",
-	}),
-	message: z
+	phoneNumber: z
 		.string()
 		.min(10, {
-			message: "Message must be at least 10 characters.",
+			message: "Please enter a valid phone number.",
 		})
-		.max(1000, {
-			message: "Message must not be longer than 1000 characters.",
+		.max(11, {
+			message: "Please enter a valid phone number.",
 		}),
+	email: z.string().email().min(2, {
+		message: "Email must be at least 2 characters.",
+	}),
+	message: z.string().optional(),
 });
 
 export function ContactForm() {
@@ -45,17 +48,34 @@ export function ContactForm() {
 		},
 	});
 
-	function onSubmit(data: z.infer<typeof FormSchema>) {
-		toast({
-			title: "You submitted the following values:",
-			description: (
-				<pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-					<code className="text-white">
-						{JSON.stringify(data, null, 2)}
-					</code>
-				</pre>
-			),
-		});
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
+		try {
+			const details = {
+				name: data.name,
+				email: data.email,
+				phoneNumber: data.phoneNumber,
+				message: data.message,
+			};
+			await emailjs.send(
+				process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+				process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+				details,
+				process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+			);
+			toast({
+				title: "Success!",
+				description:
+					"Thank you for reaching out to StyledByRose! 🌸 Your message has been received, and we’ll get back to you as soon as possible. Stay stylish!",
+			});
+			// router.push('/success')
+		} catch (error) {
+			toast({
+				title: "Error!",
+				description:
+					"An error occurred! Your message couldn't successfully send. Please reach out to me via email or phone number.",
+			});
+			// router.push('/error')
+		}
 	}
 
 	return (
@@ -112,6 +132,27 @@ export function ContactForm() {
 					</div>
 					<FormField
 						control={form.control}
+						name="phoneNumber"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>Phone number</FormLabel>
+								<FormControl>
+									<Input
+										maxLength={11}
+										id="decimalInput"
+										inputMode="numeric"
+										type="number"
+										onKeyDown={preventWrongPhoneNumber}
+										placeholder="Enter your phone number"
+										{...field}
+									/>
+								</FormControl>
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
 						name="message"
 						render={({ field }) => (
 							<FormItem>
@@ -127,8 +168,22 @@ export function ContactForm() {
 							</FormItem>
 						)}
 					/>
-					<Button size={"lg"} type="submit">
-						Send message <MoveUpRight />
+					<Button
+						disabled={form.formState.isSubmitting}
+						size={"lg"}
+						type="submit"
+					>
+						{form.formState.isSubmitting ? (
+							<>
+								Sending...
+								<LoaderCircle className="animate-spin ml-3" />
+							</>
+						) : (
+							<>
+								Send Message
+								<MoveUpRight />
+							</>
+						)}
 					</Button>
 				</form>
 			</Form>

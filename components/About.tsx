@@ -46,7 +46,12 @@ const About = () => {
 				</div>
 				<div>
 					<Button asChild size={"lg"} className="mt-2">
-						<Link href="/">Get the 31-Day style guide</Link>
+						<a
+							target="_blank"
+							href="https://wa.me/message/42L2WCSTORYKK1"
+						>
+							Get the 31-Day style guide
+						</a>
 					</Button>
 				</div>
 			</div>

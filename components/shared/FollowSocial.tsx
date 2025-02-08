@@ -15,9 +15,9 @@ const FollowSocial = () => {
 						asked questions to help you get started!
 					</p>
 				</div>
-				<div className="mt-8 flex items-center justify-center gap-8">
+				<div className="mt-8 flex items-center justify-center gap-6 md:gap-8">
 					{socialLinks.map(({ url, icon, name }, index) => (
-						<a key={index} href={url}>
+						<a target="_blank" key={index} href={url}>
 							<div className={`inline-block p-3 rounded-full`}>
 								<Image
 									src={icon}

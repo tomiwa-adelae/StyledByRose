@@ -28,7 +28,12 @@ export function Testimonials() {
 						variant={"secondary"}
 						asChild
 					>
-						<Link href="/gallery">Get your guide now</Link>
+						<a
+							target="_blank"
+							href="https://wa.me/message/42L2WCSTORYKK1"
+						>
+							Get your guide now
+						</a>
 					</Button>
 				</div>
 			</div>

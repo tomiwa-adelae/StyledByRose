@@ -26,7 +26,7 @@ const Showcase = () => {
 						Premium corporate styling for professionals who want to
 						stand out with confidence and elegance.
 					</p>
-					<div className="flex flex-col sm:flex-row items-center justify-start gap-4">
+					<div className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full">
 						<Button
 							variant={"secondary"}
 							className="w-full"
@@ -36,7 +36,12 @@ const Showcase = () => {
 							<Link href="/about">Learn more</Link>
 						</Button>
 						<Button className="w-full" asChild size={"lg"}>
-							<Link href="/">Get the 31-Day style guide</Link>
+							<a
+								target="_blank"
+								href="https://wa.me/message/42L2WCSTORYKK1"
+							>
+								Get the 31-Day style guide
+							</a>
 						</Button>
 					</div>
 				</div>

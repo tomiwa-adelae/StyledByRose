@@ -62,17 +62,24 @@ const UltimateGuide = () => {
 					</div>
 					<div>
 						<Button asChild size={"lg"} className="mt-2">
-							<Link href="/">Get the 31-Day style guide</Link>
+							<a
+								target="_blank"
+								href="https://wa.me/message/42L2WCSTORYKK1"
+							>
+								Get the 31-Day style guide
+							</a>
 						</Button>
 					</div>
 				</div>
-				<Image
-					src={"/assets/images/guide.jpeg"}
-					alt={"A picture of the 31 days styling guide"}
-					width={1000}
-					height={1000}
-					className="aspect-auto w-full h-full object-cover col-span-1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded-md"
-				/>
+				<div className="col-span-2 md:col-span-1">
+					<Image
+						src={"/assets/images/guide.jpeg"}
+						alt={"A picture of the 31 days styling guide"}
+						width={1000}
+						height={1000}
+						className="w-full h-full object-cover col-span-1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] rounded-md"
+					/>
+				</div>
 			</div>
 		</div>
 	);

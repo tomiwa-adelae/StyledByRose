@@ -73,8 +73,13 @@ export function MobileNavbar() {
 							</SheetClose>
 						);
 					})}
-					<Button className="mt-8">
-						<a href="">Get 31-day-style guide</a>
+					<Button asChild className="mt-8">
+						<a
+							target="_blank"
+							href="https://wa.me/message/42L2WCSTORYKK1"
+						>
+							Get 31-day-style guide
+						</a>
 					</Button>
 				</nav>
 			</SheetContent>

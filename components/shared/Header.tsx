@@ -37,8 +37,13 @@ const Header = ({ border }: { border?: boolean }) => {
 								{title}
 							</Link>
 						))}
-						<Button>
-							<a href="">Get styled calendar</a>
+						<Button asChild>
+							<a
+								target="_blank"
+								href="https://wa.me/message/42L2WCSTORYKK1"
+							>
+								Get styled calendar
+							</a>
 						</Button>
 					</ul>
 				</nav>

@@ -4,6 +4,16 @@ import Header from "@/components/shared/Header";
 import { Irish_Grover } from "next/font/google";
 import Image from "next/image";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "About StyledByRose | Elevating Corporate Fashion",
+	description:
+		"Learn more about StyledByRose, a premium corporate styling brand dedicated to helping professionals master sophisticated, stylish, and confident dressing. Explore our mission, vision, and expert fashion guidance.",
+	keywords:
+		"about StyledByRose, corporate styling brand, professional fashion, wardrobe styling, fashion consultancy, personal stylist, business fashion, style expertise, fashion education, tomiwa adelae, rose eyo",
+};
+
 const irish = Irish_Grover({
 	subsets: ["latin"],
 	weight: ["400"],
@@ -28,8 +38,10 @@ const page = () => {
 						className="w-auto h-auto aspect-square object-cover"
 					/>
 					<Image
-						src={"/assets/images/rose-3.jpeg"}
-						alt={"A picture of Rose Eyo wearing a black jacket"}
+						src={"/assets/images/rose-5.JPG"}
+						alt={
+							"A picture of Rose Eyo wearing a pink shirt and pink trousers without a shoe"
+						}
 						width={1000}
 						height={1000}
 						className="w-auto h-auto aspect-square object-cover md:rounded-tr-[300px]"
@@ -62,7 +74,7 @@ const page = () => {
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
 					<Image
-						src={"/assets/images/rose-4.jpeg"}
+						src={"/assets/images/rose-9.jpeg"}
 						alt={"A picture of Rose Eyo wearing a black jacket"}
 						width={1000}
 						height={1000}
