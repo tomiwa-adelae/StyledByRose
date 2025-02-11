@@ -2,7 +2,6 @@ import ContactDetails from "@/components/ContactDetails";
 import { ContactForm } from "@/components/forms/ContactForm";
 import Header from "@/components/shared/Header";
 import { socialLinks } from "@/constants";
-import { Irish_Grover } from "next/font/google";
 import Image from "next/image";
 
 import type { Metadata } from "next";
@@ -15,17 +14,13 @@ export const metadata: Metadata = {
 		"contact StyledByRose, corporate styling consultation, fashion advice, professional styling, wardrobe consultation, personal stylist, business fashion expert, get in touch, tomiwa adelae, rose eyo",
 };
 
-const irish = Irish_Grover({
-	subsets: ["latin"],
-	weight: ["400"],
-});
 const page = () => {
 	return (
 		<div>
 			<Header border={true} />
 			<div className="py-14 container">
 				<h1
-					className={`text-4xl lg:text-6xl ${irish.className} text-center leading-normal lg:leading-normal text-primary`}
+					className={`text-2xl lg:text-5xl text-center leading-normal lg:leading-normal text-primary uppercase font-semibold`}
 				>
 					Contact us
 				</h1>

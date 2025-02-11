@@ -1,7 +1,6 @@
 import FAQs from "@/components/FAQs";
 import FollowSocial from "@/components/shared/FollowSocial";
 import Header from "@/components/shared/Header";
-import { Irish_Grover } from "next/font/google";
 import Image from "next/image";
 
 import type { Metadata } from "next";
@@ -14,18 +13,13 @@ export const metadata: Metadata = {
 		"about StyledByRose, corporate styling brand, professional fashion, wardrobe styling, fashion consultancy, personal stylist, business fashion, style expertise, fashion education, tomiwa adelae, rose eyo",
 };
 
-const irish = Irish_Grover({
-	subsets: ["latin"],
-	weight: ["400"],
-});
-
 const page = () => {
 	return (
 		<div>
 			<Header border={true} />
 			<div className="pt-14">
 				<h1
-					className={`text-4xl lg:text-6xl ${irish.className} text-center leading-normal lg:leading-normal text-primary`}
+					className={`text-2xl lg:text-4xl font-semibold uppercase text-center leading-normal lg:leading-normal text-primary`}
 				>
 					About StyledByRose
 				</h1>
