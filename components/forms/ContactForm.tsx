@@ -74,12 +74,11 @@ export function ContactForm() {
 				description:
 					"An error occurred! Your message couldn't successfully send. Please reach out to me via email or phone number.",
 			});
-			// router.push('/error')
 		}
 	}
 
 	return (
-		<div className="shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] border p-8 md:p-12 rounded-xl w-full lg:max-w-lg mx-auto">
+		<div className="shadow-none sm:shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] border-0 sm:border sm:p-8 md:p-12 rounded-xl w-full lg:max-w-lg mx-auto">
 			<div className="mb-6">
 				<h3 className="text-primary uppercase leading-relaxed font-semibold text-xl md:text-2xl">
 					Get in touch
