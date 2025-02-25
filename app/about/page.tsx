@@ -66,13 +66,13 @@ const page = () => {
 						</p>
 					</div>
 				</div>
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-0 overflow-hidden">
 					<Image
 						src={"/assets/images/rose-9.jpeg"}
 						alt={"A picture of Rose Eyo wearing a black jacket"}
 						width={1000}
 						height={1000}
-						className="w-auto h-auto aspect-square object-cover"
+						className="w-auto h-auto aspect-square object-cover hover:scale-105 transition-all"
 					/>
 					<div className="container py-8 flex flex-col items-start justify-center">
 						<h3 className="text-primary uppercase leading-relaxed font-semibold text-xl md:text-2xl">

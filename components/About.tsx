@@ -6,13 +6,13 @@ import React from "react";
 
 const About = () => {
 	return (
-		<div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:gap-8">
+		<div className="grid grid-cols-1 md:grid-cols-2 md:gap-4 lg:gap-8 overflow-hidden ">
 			<Image
 				src={"/assets/images/rose-2.jpeg"}
 				alt={"A picture of Rose Eyo wearing a black jacket"}
 				width={1000}
 				height={1000}
-				className="aspect-square w-full h-full object-cover order-1"
+				className="aspect-square w-full h-full object-cover order-1 hover:scale-105 transition-all"
 			/>
 			<div className="py-12 container space-y-4 flex flex-col items-start justify-center md:order-2">
 				<h3 className="text-primary leading-relaxed font-semibold uppercase text-xl">
