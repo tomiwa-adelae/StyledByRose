@@ -18,7 +18,7 @@ export function ImageLibrary({ images }: any) {
 			<div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
 				{images.map((image: any, index: number) => (
 					<div
-						className="overflow-hidden "
+						className="overflow-hidden rounded-lg"
 						key={index}
 						onClick={() => handleOpen(index)}
 					>
